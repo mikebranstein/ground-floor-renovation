@@ -31,7 +31,13 @@ Built with vanilla HTML5 and CSS3:
 - Smooth scrolling navigation and tab switching
 - Optimized for modern browsers
 
-## Usage
+## Live Demo
+
+🌐 **[View the live site on GitHub Pages](https://mikei.github.io/ground-floor-renovation/)**
+
+*(Update the username in the link above with your GitHub username)*
+
+## Local Usage
 
 Simply open `index.html` in any modern web browser. The site is fully self-contained and requires no build process or server.
 
@@ -40,6 +46,37 @@ Simply open `index.html` in any modern web browser. The site is fully self-conta
 start index.html  # Windows
 open index.html   # macOS
 ```
+
+## Publishing to GitHub Pages
+
+This repository is configured for automatic deployment to GitHub Pages via GitHub Actions.
+
+### Setup Steps:
+
+1. **Push your code to GitHub** (if not already done):
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages** in your repository:
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages** (in the left sidebar)
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Automatic deployment**:
+   - The site will automatically deploy on every push to the `main` branch
+   - Check the **Actions** tab to monitor deployment progress
+   - Once complete, your site will be live at: `https://[your-username].github.io/ground-floor-renovation/`
+
+### Manual Deployment
+
+You can also trigger a manual deployment:
+- Go to the **Actions** tab in your repository
+- Click on "Deploy to GitHub Pages" workflow
+- Click **Run workflow**
 
 ## Project Structure
 
