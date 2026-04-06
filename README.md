@@ -8,6 +8,13 @@ The ground floor is a self-contained suite with enormous potential. Currently he
 
 ## Features
 
+### Before & After Comparisons
+The site now includes comprehensive before/after photo comparisons to visualize the transformation:
+- **Side-by-side comparisons** for key spaces (exterior, laundry)
+- **Multi-photo grids** showing current state from multiple angles (bedroom, hallway, bathroom, storage)
+- Reference photos organized by space in `images/original/` folder
+- Clear labeling and contextual captions for each comparison
+
 ### Sections Covered
 1. **Overview** — Project summary and design principles
 2. **Exterior & Entry** — Black aluminium joinery and warm brick entryway
@@ -33,9 +40,7 @@ Built with vanilla HTML5 and CSS3:
 
 ## Live Demo
 
-🌐 **[View the live site on GitHub Pages](https://mikei.github.io/ground-floor-renovation/)**
-
-*(Update the username in the link above with your GitHub username)*
+🌐 **[View the live site on GitHub Pages](https://mikebranstein.github.io/ground-floor-renovation/)**
 
 ## Local Usage
 
@@ -84,8 +89,25 @@ You can also trigger a manual deployment:
 ground-floor-renovation/
 ├── index.html          # Main single-page application
 ├── README.md           # This file
-└── images/             # Design render images
-    ├── bath-shower.png
+└── images/             # Project images
+    ├── original/       # Reference photos of existing spaces
+    │   ├── bathroom-1.jpeg
+    │   ├── bathroom-2.jpeg
+    │   ├── bathroom-3.jpeg
+    │   ├── bedroom-1-where-bed-will-be.jpeg
+    │   ├── bedroom-2-where-sofa-sitting-area-will-be.jpeg
+    │   ├── bedroom-3-fwindows-replaced-with-french-doors.jpeg
+    │   ├── bedroom-4-entryway.jpeg
+    │   ├── front-entry-1.jpeg
+    │   ├── hallway-1.jpeg
+    │   ├── hallway-2.jpeg
+    │   ├── hallway-3.jpeg
+    │   ├── laundry-1.jpeg
+    │   ├── storage-1.jpeg
+    │   ├── storage-2.jpeg
+    │   ├── storage-3.jpeg
+    │   └── storage-4.jpeg
+    ├── bath-shower.png           # Vision renders
     ├── bath-sink-toilet.png
     ├── bedroom-bed.png
     ├── bedroom-french-doors.png
@@ -103,6 +125,14 @@ All design renders showcase a cohesive aesthetic that:
 - Features matte black aluminium joinery
 - Prioritizes structural remediation (waterproofing, insulation)
 - Eliminates heritage detailing and brass fixtures
+
+### Visual Comparisons
+Each section includes before/after comparisons showing:
+- **Current state**: Reference photos documenting existing conditions and finishes
+- **Vision renders**: Professional 3D renders showing the proposed transformation
+- **Contextual captions**: Detailed descriptions of current issues and planned improvements
+
+This visual approach helps stakeholders understand both the scope of work required and the dramatic impact of the planned changes.
 
 ---
 
