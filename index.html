@@ -163,6 +163,21 @@ nav{
 .rule span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
 .rule::before,.rule::after{content:'';flex:1;height:1px;background:var(--border);}
 
+/* ─── BEFORE/AFTER COMPARISON ─── */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:2.5rem;}
+.compare-item{position:relative;}
+.compare-item img{width:100%;height:320px;object-fit:cover;border-radius:3px;display:block;}
+.compare-label{position:absolute;top:12px;left:12px;background:rgba(14,14,14,.85);color:var(--gold-light);font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:.45rem .75rem;border-radius:2px;font-weight:500;backdrop-filter:blur(4px);}
+.compare-caption{font-size:11px;color:var(--muted);font-style:italic;margin-top:.5rem;line-height:1.5;}
+
+/* Single column for multiple before photos */
+.compare-stack{margin-bottom:2.5rem;}
+.compare-stack .stack-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.7rem;margin-bottom:.7rem;}
+.compare-stack .stack-photos img{width:100%;height:240px;object-fit:cover;border-radius:3px;display:block;}
+.compare-stack .after-photo{margin-top:1.5rem;}
+.compare-stack .after-photo img{width:100%;height:420px;object-fit:cover;border-radius:3px;display:block;}
+.stack-label{background:rgba(14,14,14,.85);color:var(--gold-light);font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:.45rem .75rem;display:inline-block;border-radius:2px;font-weight:500;margin-bottom:.7rem;}
+
 /* ─── RESPONSIVE ─── */
 
 /* Tablet & Below (820px) */
@@ -241,6 +256,13 @@ nav{
   /* Rule */
   .rule{margin:2.25rem 0 1.5rem;gap:1rem;}
   .rule span{font-size:10px;}
+  
+  /* Before/After Comparison */
+  .compare-grid{grid-template-columns:1fr;gap:1rem;}
+  .compare-item img{height:280px;}
+  .compare-stack .stack-photos{grid-template-columns:1fr;gap:.6rem;}
+  .compare-stack .stack-photos img{height:220px;}
+  .compare-stack .after-photo img{height:340px;}
 }
 
 /* Mobile (480px and below) */
@@ -304,6 +326,14 @@ nav{
   /* Reduce spacing */
   .rule{margin:2rem 0 1.25rem;gap:.8rem;}
   .callout{padding:.75rem 1rem;margin:1.25rem 0;}
+  
+  /* Before/After Comparison */
+  .compare-item img{height:240px;}
+  .compare-label{font-size:8.5px;padding:.4rem .65rem;}
+  .compare-caption{font-size:10.5px;}
+  .compare-stack .stack-photos img{height:180px;}
+  .compare-stack .after-photo img{height:280px;}
+  .stack-label{font-size:8.5px;padding:.4rem .65rem;}
 }
 </style>
 </head>
@@ -402,6 +432,20 @@ nav{
     <div class="s-intro">The current exterior reads as firmly 1990s — diamond-pane doors, terracotta tiles, and a heritage coach lantern. The rendered vision below shows how the warm brick transforms with black aluminium joinery, large-format paving, and a direct bedroom connection via French doors.</div>
   </div>
 
+  <div class="rule"><span>Before & after</span></div>
+  <div class="compare-grid">
+    <div class="compare-item">
+      <img src="images/original/front-entry-1.jpeg" alt="Front entry before renovation">
+      <div class="compare-label">Before</div>
+      <p class="compare-caption">Current state: Diamond-pane glass doors, terracotta paver porch, heritage brass coach lantern, 1990s aesthetic</p>
+    </div>
+    <div class="compare-item">
+      <img src="images/outside-entryway.png" alt="Front entry vision">
+      <div class="compare-label">After — Vision</div>
+      <p class="compare-caption">Transformation: Black aluminium doors and French doors, large-format dark porcelain paving, recessed wall light, modern aesthetic</p>
+    </div>
+  </div>
+
   <div class="vision-label">Rendered vision</div>
   <img src="images/outside-entryway.png" alt="Exterior entryway rendered vision" class="img-banner tall">
   <p class="cap-single">Black aluminium entry door with slim sidelight (left) and black aluminium French doors opening to the bedroom (right). Large-format dark porcelain paving. Recessed wall light between the doors. Warm brick retained as-is.</p>
@@ -449,6 +493,20 @@ nav{
     <div class="s-intro">The laundry already has the right bones — it's the most recently updated space on the ground floor. The rendered vision shows a complete modern fit-out that sets the template for the entire ground floor: white cabinetry, warm timber benchtop, matte black tapware, and white subway tile splashback.</div>
   </div>
 
+  <div class="rule"><span>Before & after</span></div>
+  <div class="compare-grid">
+    <div class="compare-item">
+      <img src="images/original/laundry-1.jpeg" alt="Laundry before renovation">
+      <div class="compare-label">Before</div>
+      <p class="compare-caption">Current state: Basic setup with functional floor and walls, ready for complete cabinetry and fixture fit-out</p>
+    </div>
+    <div class="compare-item">
+      <img src="images/laundry.png" alt="Laundry vision">
+      <div class="compare-label">After — Vision</div>
+      <p class="compare-caption">Transformation: White flat-panel cabinetry, warm oak benchtop, black sink and tapware, white subway tile splashback, recessed lighting</p>
+    </div>
+  </div>
+
   <div class="vision-label">Rendered vision</div>
   <img src="images/laundry.png" alt="Laundry rendered vision" class="img-banner tall">
   <p class="cap-single">Flat-panel white upper and lower cabinetry. Warm oak timber benchtop with undermount black sink. Matte black tapware. White subway tile splashback. Recessed downlights. Oak-look LVP flooring continuing from the hallway.</p>
@@ -489,6 +547,20 @@ nav{
     </div>
     <div class="s-intro">At 5.1 × 3.24m with two external windows plus the new French doors, this room has the potential to be the standout space on the ground floor. The renders show two distinct zones: a calm sleeping area anchored by NZ landscape art, and a light-filled sitting area opening directly to the porch.</div>
   </div>
+
+  <div class="rule"><span>Before — Current state</span></div>
+  <div class="compare-stack">
+    <div class="stack-label">Current bedroom condition</div>
+    <div class="stack-photos">
+      <img src="images/original/bedroom-1-where-bed-will-be.jpeg" alt="Bedroom sleeping zone before">
+      <img src="images/original/bedroom-2-where-sofa-sitting-area-will-be.jpeg" alt="Bedroom sitting zone before">
+      <img src="images/original/bedroom-3-fwindows-replaced-with-french-doors.jpeg" alt="Bedroom window to be replaced with French doors">
+      <img src="images/original/bedroom-4-entryway.jpeg" alt="Bedroom entry view">
+    </div>
+    <p class="compare-caption">From left: Sleeping zone (where bed will be), sitting zone (where sofa will be), window to be replaced with French doors, entry view. Current state shows terracotta tile floor, dated built-in wardrobe, basic window joinery.</p>
+  </div>
+
+  <div class="rule"><span>After — Vision</span></div>
 
   <div class="vision-label">Rendered vision — sleeping zone (left on entry)</div>
   <img src="images/bedroom-bed.png" alt="Bedroom sleeping zone rendered vision" class="img-banner tall">
@@ -560,6 +632,19 @@ nav{
     <div class="s-intro">The hallway is already the most recently updated space on the ground floor — LVP flooring laid, walls white, basic lighting in place. The rendered vision shows the space finished: white flat-panel doors, a console table with accessories, HRV ceiling vent, and a slim runner rug that pulls the corridor together.</div>
   </div>
 
+  <div class="rule"><span>Before — Current state</span></div>
+  <div class="compare-stack">
+    <div class="stack-label">Current hallway condition</div>
+    <div class="stack-photos" style="grid-template-columns:repeat(3,1fr);">
+      <img src="images/original/hallway-1.jpeg" alt="Hallway view 1" style="height:260px;">
+      <img src="images/original/hallway-2.jpeg" alt="Hallway view 2" style="height:260px;">
+      <img src="images/original/hallway-3.jpeg" alt="Hallway view 3" style="height:260px;">
+    </div>
+    <p class="compare-caption">Multiple views of current hallway: LVP flooring already installed, white walls complete, basic ceiling lighting in place. Ready for finishing touches — console, art, runner rug, door hardware upgrade.</p>
+  </div>
+
+  <div class="rule"><span>After — Vision</span></div>
+
   <div class="vision-label">Rendered vision</div>
   <img src="images/hallway.png" alt="Hallway rendered vision" class="img-banner tall">
   <p class="cap-single">White walls, oak LVP flooring, recessed downlights and HRV ceiling vent. White flat-panel doors with simple bar handles. Slim console table in black and timber on the right wall with art above. Natural fibre runner rug. The laundry cabinetry visible on the left sets the fit-out standard.</p>
@@ -600,6 +685,19 @@ nav{
     </div>
     <div class="s-intro">The bathroom is the most dated and problematic space on the ground floor. The renders show a complete transformation: large-format marble-look wall tiles, dark charcoal floor tiles, a wall-hung oak vanity with vessel basin, wall-hung toilet, and brushed gold tapware throughout — a considered upgrade from the original brief that pairs beautifully with the warm brick exterior.</div>
   </div>
+
+  <div class="rule"><span>Before — Current state</span></div>
+  <div class="compare-stack">
+    <div class="stack-label">Current bathroom condition</div>
+    <div class="stack-photos" style="grid-template-columns:repeat(3,1fr);">
+      <img src="images/original/bathroom-1.jpeg" alt="Bathroom view 1" style="height:260px;">
+      <img src="images/original/bathroom-2.jpeg" alt="Bathroom view 2" style="height:260px;">
+      <img src="images/original/bathroom-3.jpeg" alt="Bathroom view 3" style="height:260px;">
+    </div>
+    <p class="compare-caption">Current bathroom: Dated tiles, glass block window causing damp issues, old vanity with green laminate benchtop, floor-mounted toilet, grab rails. Requires full demolition and rebuild.</p>
+  </div>
+
+  <div class="rule"><span>After — Vision</span></div>
 
   <div class="vision-label">Rendered vision — shower</div>
   <img src="images/bath-shower.png" alt="Bathroom shower rendered vision" class="img-banner mid" style="height:680px;">
@@ -654,6 +752,20 @@ nav{
     </div>
     <div class="s-intro">The former kitchenette becomes a dedicated, well-organised storage room for luggage, containers, linen, and seasonal items. The render shows a complete wall-to-wall open shelving system in warm grey — practical, accessible, and surprisingly handsome when organised well.</div>
   </div>
+
+  <div class="rule"><span>Before — Current state</span></div>
+  <div class="compare-stack">
+    <div class="stack-label">Current storage / former kitchenette</div>
+    <div class="stack-photos">
+      <img src="images/original/storage-1.jpeg" alt="Storage room view 1">
+      <img src="images/original/storage-2.jpeg" alt="Storage room view 2">
+      <img src="images/original/storage-3.jpeg" alt="Storage room view 3">
+      <img src="images/original/storage-4.jpeg" alt="Storage room view 4">
+    </div>
+    <p class="compare-caption">Current kitchenette: Tiled benchtop and sink, wood-panelled walls (moisture concern), dated finishes, diamond-pane servery hatch. Space to be converted to dedicated storage with full shelving system.</p>
+  </div>
+
+  <div class="rule"><span>After — Vision</span></div>
 
   <div class="vision-label">Rendered vision</div>
   <img src="images/storage-room.png" alt="Storage room rendered vision" class="img-banner tall" style="height:800px;">
